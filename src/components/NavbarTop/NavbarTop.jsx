@@ -36,7 +36,7 @@ export default function NavbarTop(props) {
             className="dropdown-item-custom shadow hide"
             id="dropdown-profile"
           >
-            <span>Profile</span>
+            <span onClick={handleOnClickRedirect} to="/update-profile">Profile</span>
             <span>Log out</span>
             
           </div>

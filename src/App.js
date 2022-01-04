@@ -6,7 +6,7 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import Dashboard from "./pages/dashboard/Dashboard";
 import PatientsList from "./pages/patientsList/PatientsList";
 import Patient from "./pages/patient/Patient";
-
+import Uppro from "./pages/updateProfile/Uppro";
 
 function App() {
   return (
@@ -15,14 +15,17 @@ function App() {
       <div className="containers">
         <Sidebar />
         <Switch>
-          <Route exact path ="/">
+          <Route exact path="/">
             <Dashboard />
           </Route>
-          <Route path ="/patients">
+          <Route path="/patients">
             <PatientsList />
           </Route>
-          <Route path ="/patient/:patientId">
+          <Route path="/patient/:patientId">
             <Patient />
+          </Route>
+          <Route path="/update-profile">
+            <Uppro />
           </Route>
         </Switch>
       </div>
