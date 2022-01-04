@@ -24,5 +24,32 @@
     cursor: pointer;
 }
 
+.dropdown-item-custom{
+    position: absolute;
+    top: 50px;
+    background: #FFFFFF;
+    right: 0px;
+    width: 155px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    z-index: 100;
+
+}
+.dropdown-item-custom.hide{
+    overflow: hidden;
+    height: 0px;
+    padding: 0px;
+}
+.dropdown-item-custom >span{
+    padding: 5px 10px;
+    cursor: pointer;
+    user-select: none;
+}
+.dropdown-item-custom >span:hover{
+    background: #e6e3e3;
+}
+
 
 
