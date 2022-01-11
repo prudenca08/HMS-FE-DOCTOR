@@ -1,0 +1,35 @@
+.outpatientList{
+    flex: 4;
+}
+.outpatientEdit{
+    cursor: pointer;
+    margin-right: 20px;
+    color: rgb(42, 124, 218);
+}
+.outpatientDelete{
+    cursor: pointer;
+    color: crimson;
+}
+.outpatientListTitleContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.outpatientAddButton{
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 100px;
+    padding: 7px 7px;
+    cursor: pointer;
+    background-color: #8282F3;
+    color: white;
+    font-weight: 400;
+    
+}
+.outpatientAdd{
+    display: flex;
+    padding: 20px 5px;
+    right: 0;
+    margin-left: 60em;
+}

@@ -18,6 +18,9 @@ export default function NavbarTop(props) {
       let target = event.target.getAttribute("to");
       history.push(target)
   }
+
+  
+
   return (
     <div className="navbarTop">
       <div className="navbarTopWrapper">

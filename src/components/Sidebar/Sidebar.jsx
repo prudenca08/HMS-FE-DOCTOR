@@ -23,6 +23,12 @@ const Sidebar = () => {
               Patients
             </li>
             </Link>
+            <Link to= "/outpatients" className="link" >
+            <li className="sidebarListItem">
+              <img src={PatientIcon} className="sidebarIcon" alt="" />
+              OutPatient
+            </li>
+            </Link>
             <li className="sidebarListItem">
               <img src={RecipeIcon} className="sidebarIcon" alt="" />
               Recipe
