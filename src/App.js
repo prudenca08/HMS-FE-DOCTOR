@@ -10,7 +10,9 @@ import Uppro from "./pages/updateProfile/Uppro";
 import ManageOutpatient from "./pages/manageOutpatient/ManageOutpatient";
 import Outpatient from "./pages/outpatient/Outpatient";
 import FormLogin from "./pages/login/Form";
-
+import RecipeList from "./pages/recipeList/RecipeList";
+import Recipe from "./pages/recipe/Recipe";
+import NewRecipe from "./pages/newRecipe/NewRecipe";
 
 function App() {
   return (
@@ -41,6 +43,15 @@ function App() {
               </Route>
               <Route path="/outpatient/:outpatientId">
                 <Outpatient />
+              </Route>
+              <Route path="/recipes">
+                <RecipeList />
+              </Route>
+              <Route path="/recipe/:recipeId">
+                <Recipe />
+              </Route>
+              <Route path="/newRecipe">
+                <NewRecipe />
               </Route>
             </Switch>
           </div>

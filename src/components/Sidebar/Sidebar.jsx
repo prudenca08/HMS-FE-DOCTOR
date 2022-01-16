@@ -11,28 +11,30 @@ const Sidebar = () => {
       <div className="sidebarWrapper">
         <div className="sidebarMenu">
           <ul className="sidebarList">
-          <Link to= "/" className="link" >
-            <li className="sidebarListItem active">
-              <HomeIcon className="sidebarIcon" />
-              Dashboard
-            </li>
+            <Link to="/" className="link">
+              <li className="sidebarListItem active">
+                <HomeIcon className="sidebarIcon" />
+                Dashboard
+              </li>
             </Link>
-            <Link to= "/patients" className="link" >
-            <li className="sidebarListItem">
-              <img src={PatientIcon} className="sidebarIcon" alt="" />
-              Patients
-            </li>
+            <Link to="/patients" className="link">
+              <li className="sidebarListItem">
+                <img src={PatientIcon} className="sidebarIcon" alt="" />
+                Patients
+              </li>
             </Link>
-            <Link to= "/outpatients" className="link" >
-            <li className="sidebarListItem">
-              <img src={PatientIcon} className="sidebarIcon" alt="" />
-              OutPatient
-            </li>
+            <Link to="/outpatients" className="link">
+              <li className="sidebarListItem">
+                <img src={PatientIcon} className="sidebarIcon" alt="" />
+                OutPatient
+              </li>
             </Link>
-            <li className="sidebarListItem">
-              <img src={RecipeIcon} className="sidebarIcon" alt="" />
-              Recipe
-            </li>
+            <Link to="/recipes" className="link">
+              <li className="sidebarListItem">
+                <img src={RecipeIcon} className="sidebarIcon" alt="" />
+                Recipe
+              </li>
+            </Link>
           </ul>
         </div>
       </div>
