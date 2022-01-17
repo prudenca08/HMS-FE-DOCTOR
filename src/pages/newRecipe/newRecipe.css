@@ -1,0 +1,44 @@
+.newRecipe {
+  flex: 4;
+  margin-left: 20px;
+}
+.newRecipeForm {
+  display: flex;
+  flex-wrap: wrap;
+}
+.newRecipeItem {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+.newRecipeItem > label {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: gray;
+}
+.newRecipeItem > label > input {
+  height: 20px;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.newRecipeGender > label {
+  margin-right: 10px;
+  font-size: 18px;
+}
+.newRecipeButton {
+  margin-top: 50px;
+  margin-right: 300px;
+  border-radius: 100px;
+  border: none;
+  width: 100px;
+  padding: 7px 10px;
+  cursor: pointer;
+  background-color: #8282f3;
+  color: white;
+  font-weight: 400;
+}
