@@ -68,7 +68,7 @@ export default function Uppro() {
                 <label>Name</label>
                 <input
                   type="text"
-                  placeholder="Margareth Ellie"
+                  value="Margareth Ellie"
                   className="doctorUpdateInput"
                 />
               </div>
@@ -76,7 +76,7 @@ export default function Uppro() {
                 <label>NIP</label>
                 <input
                   type="text"
-                  placeholder="12125634256"
+                  value="12125634256"
                   className="doctorUpdateInput"
                 />
               </div>
@@ -84,7 +84,7 @@ export default function Uppro() {
                 <label>Phone</label>
                 <input
                   type="text"
-                  placeholder="088888"
+                  value="088888"
                   className="doctorUpdateInput"
                 />
               </div>
@@ -92,7 +92,7 @@ export default function Uppro() {
                 <label>Specialist</label>
                 <input
                   type="text"
-                  placeholder="Tenaga Dalam"
+                  value="Tenaga Dalam"
                   className="doctorUpdateInput"
                 />
               </div>
@@ -100,7 +100,7 @@ export default function Uppro() {
                 <label>Room</label>
                 <input
                   type="text"
-                  placeholder="H2"
+                  value="H2"
                   className="doctorUpdateInput"
                 />
               </div>
@@ -108,7 +108,7 @@ export default function Uppro() {
                 <label>Username</label>
                 <input
                   type="text"
-                  placeholder="abc123"
+                  value="abc123"
                   className="doctorUpdateInput"
                 />
               </div>
@@ -116,7 +116,7 @@ export default function Uppro() {
                 <label>Password</label>
                 <input
                   type="text"
-                  placeholder="abc123"
+                  value="abc123"
                   className="doctorUpdateInput"
                 />
               </div>
@@ -134,7 +134,7 @@ export default function Uppro() {
                 <label>Experince</label>
                 <textarea
                   type="text"
-                  placeholder="S1- Kedokteran Umum Undip , S2 - Ilmu Perdukunan"
+                  value="S1- Kedokteran Umum Undip , S2 - Ilmu Perdukunan"
                   className="doctorUpdateInput"
                 />
               </div>

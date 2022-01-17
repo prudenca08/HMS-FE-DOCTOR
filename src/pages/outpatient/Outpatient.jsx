@@ -70,7 +70,7 @@ export default function Outpatient() {
                 <label>Patient Name</label>
                 <input
                   type="text"
-                  placeholder="Margareth Ellie"
+                  value="Margareth Ellie"
                   className="outpatientUpdateInput"
                 />
               </div>
@@ -78,7 +78,7 @@ export default function Outpatient() {
                 <label>Day</label>
                 <input
                   type="text"
-                  placeholder="Monday"
+                  value="Monday"
                   className="outpatientUpdateInput"
                 />
               </div>
@@ -94,14 +94,14 @@ export default function Outpatient() {
                   isClearable
                   showYearDropdown
                   scrollableMonthYearDropdown
-                  placeholderText="29/12/2021"
+                  value="29/12/2021"
                 ></DatePicker>
               </div>
               <div className="outpatientUpdateItem">
                 <label>Time</label>
                 <input
                   type="text"
-                  placeholder="10.00m - 10.50"
+                  value="10.00m - 10.50"
                   className="outpatientUpdateInput"
                 />
               </div>
@@ -109,7 +109,7 @@ export default function Outpatient() {
                 <label>Doctor</label>
                 <input
                   type="text"
-                  placeholder="dr.Thomas Harianja"
+                  value="dr.Thomas Harianja"
                   className="outpatientUpdateInput"
                 />
               </div>
@@ -117,7 +117,7 @@ export default function Outpatient() {
                 <label>Room</label>
                 <input
                   type="text"
-                  placeholder="A27"
+                  value="A27"
                   className="outpatientUpdateInput"
                 />
               </div>
@@ -127,7 +127,7 @@ export default function Outpatient() {
                 <label>Symptoms</label>
                 <textarea
                   type="text"
-                  placeholder="Gatal-gatal, sesak nafas, demam, batuk, pilek, mata berair, lorem ipsum dolor sit amet narmis"
+                  value="Gatal-gatal, sesak nafas, demam, batuk, pilek, mata berair, lorem ipsum dolor sit amet narmis"
                   className="outpatientUpdateInput"
                 />
               </div>

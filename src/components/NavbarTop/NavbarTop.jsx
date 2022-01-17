@@ -40,7 +40,8 @@ export default function NavbarTop(props) {
             id="dropdown-profile"
           >
             <span onClick={handleOnClickRedirect} to="/update-profile">Profile</span>
-            <span>Log out</span>
+            <span  onClick={handleOnClickRedirect}
+            to="/login">Log out</span>
             
           </div>
         </div>

@@ -3,6 +3,7 @@ import "./sidebar.css";
 import HomeIcon from "@material-ui/icons/Home";
 import PatientIcon from "../../assets/img/icon/patientIcon.png";
 import RecipeIcon from "../../assets/img/icon/recipeIcon.png";
+import ManageIcon from "../../assets/img/icon/manageIcon.png";
 import { Link } from "react-router-dom";
 
 const Sidebar = () => {
@@ -25,8 +26,8 @@ const Sidebar = () => {
             </Link>
             <Link to= "/outpatients" className="link" >
             <li className="sidebarListItem">
-              <img src={PatientIcon} className="sidebarIcon" alt="" />
-              OutPatient
+              <img src={ManageIcon} className="sidebarIcon" alt="" />
+              Outpatient
             </li>
             </Link>
             <li className="sidebarListItem">
