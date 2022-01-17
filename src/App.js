@@ -13,6 +13,7 @@ import FormLogin from "./pages/login/Form";
 import RecipeList from "./pages/recipeList/RecipeList";
 import Recipe from "./pages/recipe/Recipe";
 import NewRecipe from "./pages/newRecipe/NewRecipe";
+import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
   return (
@@ -26,33 +27,33 @@ function App() {
           <div className="containers">
             <Sidebar />
             <Switch>
-              <Route exact path="/">
+              <PrivateRoute exact path="/">
                 <Dashboard />
-              </Route>
-              <Route path="/patients">
+              </PrivateRoute>
+              <PrivateRoute path="/patients">
                 <PatientsList />
-              </Route>
-              <Route path="/patient/:patientId">
+              </PrivateRoute>
+              <PrivateRoute path="/patient/:patientId">
                 <Patient />
-              </Route>
-              <Route path="/update-profile">
+              </PrivateRoute>
+              <PrivateRoute path="/update-profile">
                 <Uppro />
-              </Route>
-              <Route path="/outpatients">
+              </PrivateRoute>
+              <PrivateRoute path="/outpatients">
                 <ManageOutpatient />
-              </Route>
-              <Route path="/outpatient/:outpatientId">
+              </PrivateRoute>
+              <PrivateRoute path="/outpatient/:outpatientId">
                 <Outpatient />
-              </Route>
-              <Route path="/recipes">
+              </PrivateRoute>
+              <PrivateRoute path="/recipes">
                 <RecipeList />
-              </Route>
-              <Route path="/recipe/:recipeId">
+              </PrivateRoute>
+              <PrivateRoute path="/recipe/:recipeId">
                 <Recipe />
-              </Route>
-              <Route path="/newRecipe">
+              </PrivateRoute>
+              <PrivateRoute path="/newRecipe">
                 <NewRecipe />
-              </Route>
+              </PrivateRoute>
             </Switch>
           </div>
         </>

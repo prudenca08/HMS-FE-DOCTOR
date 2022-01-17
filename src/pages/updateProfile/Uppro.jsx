@@ -2,17 +2,13 @@ import React from "react";
 import "./upPro.css";
 import PermIdentityIcon from "@material-ui/icons/PermIdentity";
 import ConfirmationNumberIcon from "@material-ui/icons/ConfirmationNumber";
-import CalendarTodayIcon from "@material-ui/icons/CalendarToday";
-import WcIcon from "@material-ui/icons/Wc";
 import PhoneIcon from "@material-ui/icons/Phone";
-import HomeIcon from "@material-ui/icons/Home";
 import MeetingRoomIcon from '@material-ui/icons/MeetingRoom';
 import FaceIcon from '@material-ui/icons/Face';
 import VpnKeyIcon from '@material-ui/icons/VpnKey';
 import GradeIcon from '@material-ui/icons/Grade';
 import NoteAddIcon from '@material-ui/icons/NoteAdd';
-import LocalHospitalIcon from "@material-ui/icons/LocalHospital";
-import { Link } from "react-router-dom";
+
 
 export default function Uppro() {
   return (

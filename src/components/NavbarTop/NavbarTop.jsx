@@ -3,8 +3,10 @@ import "./navbarTop.css";
 import Logo from "../../assets/img/logo/logo.png";
 import Avatar from "../../assets/img/icon/avatar.png";
 import { useHistory } from "react-router-dom";
+import { ChangeGlobalRedux } from "../../config/redux/action";
+import { connect } from "react-redux";
 
-export default function NavbarTop(props) {
+const NavbarTop = (props) => {
   const history = useHistory();
   const handleOnClickProfile = (event) => {
     let target = document.getElementById("dropdown-profile");
@@ -14,18 +16,29 @@ export default function NavbarTop(props) {
       target.classList.add("hide");
     }
   };
-  const handleOnClickRedirect = (event)=>{
-      let target = event.target.getAttribute("to");
-      history.push(target)
-  }
+  const handleOnClickRedirect = (event) => {
+    let target = event.target.getAttribute("to");
+    history.push(target);
+  };
 
-  
+  const handleOnClickLogout = () => {
+    props.changeGlobal({ type: "CHANGE_LOGIN", value: false });
+    props.changeGlobal({ type: "CHANGE_USER", value: null });
+    localStorage.clear();
+    history.push("/login");
+  };
 
   return (
     <div className="navbarTop">
       <div className="navbarTopWrapper">
         <div className="navbarTopLeft">
-          <img src={Logo} alt="" className="logo" onClick={handleOnClickRedirect}  to="/" />
+          <img
+            src={Logo}
+            alt=""
+            className="logo"
+            onClick={handleOnClickRedirect}
+            to="/"
+          />
         </div>
         <div className="navbarTopRight">
           <img
@@ -39,13 +52,21 @@ export default function NavbarTop(props) {
             className="dropdown-item-custom shadow hide"
             id="dropdown-profile"
           >
-            <span onClick={handleOnClickRedirect} to="/update-profile">Profile</span>
-            <span  onClick={handleOnClickRedirect}
-            to="/login">Log out</span>
-            
+            <span onClick={handleOnClickRedirect} to="/update-profile">
+              Profile
+            </span>
+            <span onClick={handleOnClickLogout}>Log out</span>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
+
+const reduxState = (state) => ({});
+
+const reduxDispatch = (dispatch) => ({
+  changeGlobal: (data) => dispatch(ChangeGlobalRedux(data)),
+});
+
+export default connect(reduxState, reduxDispatch)(NavbarTop);

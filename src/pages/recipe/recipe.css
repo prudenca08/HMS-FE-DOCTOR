@@ -75,8 +75,14 @@
 }
 .recipeUpdateInput {
   border: none;
-  width: 250px;
+  width: 400px;
   height: 30px;
+  border-bottom: 1px solid gray;
+}
+.recipeUpdateSymptoms{
+  border: none;
+  width: 400px;
+  height: 70px;
   border-bottom: 1px solid gray;
 }
 .recipeUpdateButton {
