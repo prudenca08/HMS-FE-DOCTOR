@@ -18,7 +18,7 @@ export default function RecipeList() {
     { field: "patientName", headerName: "Nama Pasien", width: 180 },
     { field: "date", headerName: "Date", width: 150 },
     { field: "title", headerName: "Title", width: 150 },
-    { field: "detail", headerName: "Detail", width: 150 },
+    { field: "detail", headerName: "Detail", width: 300 },
     {
       field: "action",
       headerName: "Action",

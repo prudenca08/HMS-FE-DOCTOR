@@ -34,3 +34,23 @@ export const actionLogin = (data) => (dispatch) => {
       });
   });
 };
+
+export const actionGetAllPatients = () => (dispatch) => {
+  return new Promise((resolve, reject) => {
+    axios
+      .get("/patient", {})
+      .then((result) => {
+        let data = [...result.data.data];
+        data.forEach((item) => {
+          item.id = item["id:"];
+        });
+        console.log(data);
+        dispatch({ type: "CHANGE_PATIENT", value: data });
+        resolve(result.status);
+      })
+      .catch((err) => {
+        dispatch({ type: "CHANGE_PATIENT", value: [] });
+        reject(err.response);
+      });
+  });
+};

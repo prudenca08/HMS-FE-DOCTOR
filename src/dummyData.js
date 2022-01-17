@@ -107,7 +107,21 @@ export const recipeRows = [
     id: 1,
     patientName: "Margareth Ellie",
     date: "29/12/2021",
-    title: "Sakit perut",
-    detail: "asdasdsa",
+    title: "Luka Bakar",
+    detail: "Salep silver sulfadiazine, dioleskan pada luka dua kali sehari",
+  },
+  {
+    id: 2,
+    patientName: "Hayati Sulivan",
+    date: "29/12/2021",
+    title: "Sakit mata",
+    detail: "Refresh Eye Drops diteteskan sekali 2 jam",
+  },
+  {
+    id: 3,
+    patientName: "Michael Jordan",
+    date: "29/12/2021",
+    title: "Sakit hati",
+    detail: "Hansaplas dilengketkan pada hati yg terluka",
   },
 ];

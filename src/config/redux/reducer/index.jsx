@@ -4,6 +4,7 @@ const initialState = {
   user: localStorage.getItem("user")
     ? JSON.parse(localStorage.getItem("user"))
     : null,
+    patient : [],
 };
 
 const listAction = [
@@ -30,6 +31,13 @@ const listAction = [
           };
       },
   },
+  //Change Patient
+  {
+    type : "CHANGE_PATIENT",
+    name : "patient",
+    action : null,
+
+  }
 ];
 
 const reducer = (state = initialState, actions) => {
