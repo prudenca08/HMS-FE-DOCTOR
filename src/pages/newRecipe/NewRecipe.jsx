@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./newRecipe.css";
+import DatePicker from "react-datepicker";
 
 export default function NewRecipe() {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -15,7 +16,16 @@ export default function NewRecipe() {
         </div>
         <div className="newRecipeItem">
           <label>Date</label>
-          <input type="text" placeholder="Enter Date" />
+          <DatePicker
+            selected={selectedDate}
+            onChange={(date) => setSelectedDate(date)}
+            dateFormat="dd/MM/yyyy"
+            filterDate={(date) => date.getDay() !== 6 && date.getDay() !== 0}
+            isClearable
+            showYearDropdown
+            scrollableMonthYearDropdown
+            value="29/12/2021"
+          ></DatePicker>
         </div>
 
         <div className="newRecipeItem">
