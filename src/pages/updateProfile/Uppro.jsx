@@ -45,10 +45,6 @@ export default function Uppro() {
               <span className="doctorShowInfoTitle">abc123</span>
             </div>
             <div className="doctorShowInfo">
-              <VpnKeyIcon className="doctorShowIcon" />
-              <span className="doctorShowInfoTitle">abc123</span>
-            </div>
-            <div className="doctorShowInfo">
               <GradeIcon className="doctorShowIcon" />
               <span className="doctorShowInfoTitle">
               S1- Kedokteran Umum Undip , S2 - Ilmu Perdukunan
@@ -100,16 +96,11 @@ export default function Uppro() {
                   className="doctorUpdateInput"
                 />
               </div>
-              <div className="doctorUpdateItem">
+              
+            </div>
+            <div className="doctorUpdateRight">
+            <div className="doctorUpdateItem">
                 <label>Username</label>
-                <input
-                  type="text"
-                  value="abc123"
-                  className="doctorUpdateInput"
-                />
-              </div>
-              <div className="doctorUpdateItem">
-                <label>Password</label>
                 <input
                   type="text"
                   value="abc123"
@@ -124,8 +115,6 @@ export default function Uppro() {
                   className="doctorUpdateInput"
                 />
               </div>
-            </div>
-            <div className="doctorUpdateRight">
               <div className="doctorUpdateItem">
                 <label>Experince</label>
                 <textarea
@@ -137,6 +126,7 @@ export default function Uppro() {
               <button className="doctorUpdateButton">Save</button>
             </div>
           </form>
+          <button className="passwordChangeButton">Change Password</button>
         </div>
       </div>
     </div>

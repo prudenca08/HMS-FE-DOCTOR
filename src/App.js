@@ -14,6 +14,7 @@ import RecipeList from "./pages/recipeList/RecipeList";
 import Recipe from "./pages/recipe/Recipe";
 import NewRecipe from "./pages/newRecipe/NewRecipe";
 import PrivateRoute from "./components/PrivateRoute";
+import UpdatePassword from "./pages/updatePassword/UpdatePassword";
 
 function App() {
   return (
@@ -45,14 +46,8 @@ function App() {
               <PrivateRoute path="/outpatient/:outpatientId">
                 <Outpatient />
               </PrivateRoute>
-              <PrivateRoute path="/recipes">
-                <RecipeList />
-              </PrivateRoute>
-              <PrivateRoute path="/recipe/:recipeId">
-                <Recipe />
-              </PrivateRoute>
-              <PrivateRoute path="/newRecipe">
-                <NewRecipe />
+              <PrivateRoute path="/updatePassword">
+                <UpdatePassword />
               </PrivateRoute>
             </Switch>
           </div>

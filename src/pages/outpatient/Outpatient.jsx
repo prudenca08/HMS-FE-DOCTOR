@@ -8,7 +8,8 @@ import AssignmentIndIcon from "@material-ui/icons/AssignmentInd";
 import MeetingRoomIcon from "@material-ui/icons/MeetingRoom";
 import LocalHospitalIcon from "@material-ui/icons/LocalHospital";
 import AssignmentTurnedInIcon from "@material-ui/icons/AssignmentTurnedIn";
-import { Link } from "react-router-dom";
+import FindInPageIcon from "@material-ui/icons/FindInPage";
+import FilterFramesIcon from "@material-ui/icons/FilterFrames";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -16,15 +17,12 @@ export default function Outpatient() {
   const [selectedDate, setSelectedDate] = useState(null);
   return (
     <div className="outpatient">
-      <div className="outpatientTitleContainer">
-        <h3 className="ListTitle">Edit Outpatient</h3>
-      </div>
       <div className="outpatientContainer">
         <div className="outpatientShow">
           <div className="outpatientShowDetail">
             <span className="outpatientShowTitle">Outpatient Details</span>
             <div className="outpatientShowInfo">
-              <PermIdentityIcon className="outpatientShowIcon" />
+            <PermIdentityIcon className="outpatientShowIcon" />
               <span className="outpatientShowInfoTitle">Margareth Ellie</span>
             </div>
             <div className="outpatientShowInfo">
@@ -46,6 +44,10 @@ export default function Outpatient() {
               </span>
             </div>
             <div className="outpatientShowInfo">
+              <MeetingRoomIcon className="outpatientShowIcon" />
+              <span className="outpatientShowInfoTitle">A27</span>
+            </div>
+            <div className="outpatientShowInfo">
               <LocalHospitalIcon className="outpatientShowIcon" />
               <span className="outpatientShowInfoTitle">
                 Gatal-gatal, sesak nafas, demam, batuk, pilek, mata berair,
@@ -53,8 +55,15 @@ export default function Outpatient() {
               </span>
             </div>
             <div className="outpatientShowInfo">
-              <MeetingRoomIcon className="outpatientShowIcon" />
-              <span className="outpatientShowInfoTitle">A27</span>
+              <FindInPageIcon className="outpatientShowIcon" />
+              <span className="outpatientShowInfoTitle">Asam Lambung</span>
+            </div>
+            <div className="outpatientShowInfo">
+              <FilterFramesIcon className="outpatientShowIcon" />
+              <span className="outpatientShowInfoTitle">
+                Antasid Menetralkan efek asam lambung. 2 kali sehari setelah
+                makan
+              </span>
             </div>
             <div className="outpatientShowInfo">
               <AssignmentTurnedInIcon className="outpatientShowIcon" />
@@ -70,17 +79,19 @@ export default function Outpatient() {
                 <label>Patient Name</label>
                 <input
                   type="text"
-                  value="Margareth Ellie"
+                  placeholder="Margareth Ellie"
                   className="outpatientUpdateInput"
                 />
               </div>
               <div className="outpatientUpdateItem">
-                <label>Day</label>
-                <input
-                  type="text"
-                  value="Monday"
+                <label>Schedule</label>
+                <select
                   className="outpatientUpdateInput"
-                />
+                  value="Senin , 13.00 -13.30"
+                >
+                  <option>Pilih Jadwal</option>
+                  <option>Senin , 13.00 -13.30</option>
+                </select>
               </div>
               <div className="outpatientUpdateItem">
                 <label>Date</label>
@@ -94,16 +105,8 @@ export default function Outpatient() {
                   isClearable
                   showYearDropdown
                   scrollableMonthYearDropdown
-                  value="29/12/2021"
+                  placeholderText="29/12/2021"
                 ></DatePicker>
-              </div>
-              <div className="outpatientUpdateItem">
-                <label>Time</label>
-                <input
-                  type="text"
-                  value="10.00m - 10.50"
-                  className="outpatientUpdateInput"
-                />
               </div>
               <div className="outpatientUpdateItem">
                 <label>Doctor</label>
@@ -131,6 +134,24 @@ export default function Outpatient() {
                   className="outpatientUpdateInput"
                 />
               </div>
+              <div className="outpatientUpdateItem">
+                <label>Diagnosis</label>
+                <textarea
+                  type="text"
+                  value="Asam Lambung"
+                  className="outpatientUpdateInput"
+                />
+              </div>
+              <div className="outpatientUpdateItem">
+                <label>Medicine Recipe</label>
+                <textarea
+                  type="text"
+                  value="Antasid Menetralkan efek asam lambung. 2 kali sehari setelah
+                  makan"
+                  className="outpatientUpdateInput"
+                />
+              </div>
+
               <div className="outpatientUpdateItem">
                 <label>Status</label>
                 <select name="status" id="status">

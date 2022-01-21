@@ -22,7 +22,6 @@ const Patient = (props) => {
     gender: "",
     phone: "",
     address: "",
-    symptoms: "",
   });
 
   const [patient, setPatient] = useState({});
@@ -74,10 +73,6 @@ const Patient = (props) => {
             <div className="patientShowInfo">
               <HomeIcon className="patientShowIcon" />
               <span className="patientShowInfoTitle">{patient.address}</span>
-            </div>
-            <div className="patientShowInfo">
-              <LocalHospitalIcon className="patientShowIcon" />
-              <span className="patientShowInfoTitle">{patient.symptoms}</span>
             </div>
           </div>
         </div>

@@ -2,7 +2,7 @@ import React from "react";
 import "./sidebar.css";
 import HomeIcon from "@material-ui/icons/Home";
 import PatientIcon from "../../assets/img/icon/patientIcon.png";
-import RecipeIcon from "../../assets/img/icon/recipeIcon.png";
+import PasswordIcon from "../../assets/img/icon/passwordIcon.png";
 import ManageIcon from "../../assets/img/icon/manageIcon.png";
 import { Link } from "react-router-dom";
 
@@ -30,10 +30,10 @@ const Sidebar = () => {
                 Outpatient
               </li>
             </Link>
-            <Link to="/recipes" className="link">
+            <Link to="/updatePassword" className="link">
               <li className="sidebarListItem">
-                <img src={RecipeIcon} className="sidebarIcon" alt="" />
-                Recipe
+                <img src={PasswordIcon} className="sidebarIcon" alt="" />
+                Password
               </li>
             </Link>
           </ul>

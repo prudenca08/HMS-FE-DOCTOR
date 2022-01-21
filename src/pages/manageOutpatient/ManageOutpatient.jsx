@@ -21,8 +21,10 @@ export default function ManageOutpatient() {
     { field: "date", headerName: "Date", width: 150 },
     { field: "time", headerName: "Time", width: 150 },
     { field: "doctor", headerName: "Doctor", width: 150 },
-    { field: "symptoms", headerName: "Symptoms", width: 150 },
     { field: "room", headerName: "Room", width: 100 },
+    { field: "symptoms", headerName: "Symptoms", width: 150 },
+    {field: "title", headerName: "Diagnosis", width:150},
+    {field: "detail_recipe", headerName: "Medicine Recipe", width:150},
     { field: "status", headerName: "Status", width: 100 },
     {
       field: "action",
@@ -45,12 +47,8 @@ export default function ManageOutpatient() {
   ];
 
   return (
-    <div className="outpatientList">
-      <div className="outpatientListTitleContainer">
-        <h3 className="ListTitle">Outpatient Session</h3>
-      </div>
-      
-
+    <div className="outpatientList p-3">
+      <h1>Outpatient Session</h1>
       <DataGrid
         rows={data}
         columns={columns}

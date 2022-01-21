@@ -90,3 +90,14 @@
   color: white;
   font-weight: 400;
 }
+.passwordChangeButton{
+  border-radius: 5px;
+  border: none;
+  width: 250px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: #1e9df1;
+  color: white;
+  font-weight: 400;
+  float: right;
+}
