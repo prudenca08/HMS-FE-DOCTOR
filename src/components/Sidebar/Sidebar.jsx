@@ -2,8 +2,8 @@ import React from "react";
 import "./sidebar.css";
 import HomeIcon from "@material-ui/icons/Home";
 import PatientIcon from "../../assets/img/icon/patientIcon.png";
-import PasswordIcon from "../../assets/img/icon/passwordIcon.png";
 import ManageIcon from "../../assets/img/icon/manageIcon.png";
+import PassIcon from "../../assets/img/icon/passwordIcon.png";
 import { Link } from "react-router-dom";
 
 const Sidebar = () => {
@@ -32,7 +32,7 @@ const Sidebar = () => {
             </Link>
             <Link to="/updatePassword" className="link">
               <li className="sidebarListItem">
-                <img src={PasswordIcon} className="sidebarIcon" alt="" />
+                <img src={PassIcon} className="sidebarIcon" alt="" />
                 Password
               </li>
             </Link>

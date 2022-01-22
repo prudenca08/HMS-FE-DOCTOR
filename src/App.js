@@ -10,9 +10,6 @@ import Uppro from "./pages/updateProfile/Uppro";
 import ManageOutpatient from "./pages/manageOutpatient/ManageOutpatient";
 import Outpatient from "./pages/outpatient/Outpatient";
 import FormLogin from "./pages/login/Form";
-import RecipeList from "./pages/recipeList/RecipeList";
-import Recipe from "./pages/recipe/Recipe";
-import NewRecipe from "./pages/newRecipe/NewRecipe";
 import PrivateRoute from "./components/PrivateRoute";
 import UpdatePassword from "./pages/updatePassword/UpdatePassword";
 
