@@ -1,17 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./manageOutpatient.css";
 import { DataGrid } from "@mui/x-data-grid";
 import DeleteOutlineIcon from "@material-ui/icons/DeleteOutline";
 import EditIcon from "@material-ui/icons/Edit";
-import { outpatient } from "../../dummyData";
+import { outpatientRows } from "../../dummyData";
 import { Link } from "react-router-dom";
+import { actionGetAllOutpatients } from "../../config/redux/action";
+import { connect } from "react-redux";
 
-export default function ManageOutpatient() {
-  const [data, setData] = useState(outpatient);
+const ManageOutpatient = (props)=> {
+
+  const [data, setData] = useState(outpatientRows);
 
   const handleDelete = (id) => {
     setData(data.filter((item) => item.id !== id));
   };
+
+  useEffect(() => {
+    if (props.outpatient.length <= 0) {
+      props.AllOutpatient(Number(props.user.id)).then(() => {
+        console.log(props.outpatient);
+      });
+    } else {
+      setData(props.outpatient);
+    }
+  }, [props]);
 
 
   const columns = [
@@ -20,11 +33,11 @@ export default function ManageOutpatient() {
     { field: "day", headerName: "Day", width: 150 },
     { field: "date", headerName: "Date", width: 150 },
     { field: "time", headerName: "Time", width: 150 },
-    { field: "doctor", headerName: "Doctor", width: 150 },
+    { field: "doctor_name", headerName: "Doctor", width: 150 },
     { field: "room", headerName: "Room", width: 100 },
     { field: "symptoms", headerName: "Symptoms", width: 150 },
     {field: "title", headerName: "Diagnosis", width:150},
-    {field: "detail_recipe", headerName: "Medicine Recipe", width:150},
+    {field: "detailrecipe", headerName: "Medicine Recipe", width:150},
     { field: "status", headerName: "Status", width: 100 },
     {
       field: "action",
@@ -40,11 +53,7 @@ export default function ManageOutpatient() {
           >
             <EditIcon />
           </Link>
-          <DeleteOutlineIcon
-            role="button"
-            className="text-danger"
-            onClick={() => handleDelete(params.row.id)}
-          />
+          
         </div>
         );
       },
@@ -52,16 +61,28 @@ export default function ManageOutpatient() {
   ];
 
   return (
-    <div className="outpatientList p-3">
+    <div className="outpatientList p-4">
       <h1>Outpatient Session</h1>
-      <DataGrid
-        rows={data}
-        columns={columns}
-        pageSize={5}
-        rowsPerPageOptions={[5]}
-        checkboxSelection
-        disableSelectionOnClick
-      />
+      {props.outpatient.length !== 0 && (
+        <DataGrid
+          rows={data}
+          columns={columns}
+          pageSize={10}
+          rowsPerPageOptions={[25]}
+          checkboxSelection
+          autoHeight={true}
+        />
+      )}
     </div>
   );
 }
+
+const reduxState = (state) => ({
+  user : state.user,
+  outpatient: state.outpatient,
+});
+const reduxDispatch = (dispatch) => ({
+  AllOutpatient: (data) => dispatch(actionGetAllOutpatients(data)),
+});
+
+export default connect(reduxState, reduxDispatch)(ManageOutpatient);

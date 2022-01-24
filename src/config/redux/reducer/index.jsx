@@ -5,6 +5,9 @@ const initialState = {
     ? JSON.parse(localStorage.getItem("user"))
     : null,
     patient : [],
+    outpatient: [],
+    doctor : [],
+    patsche :[],
 };
 
 const listAction = [
@@ -37,7 +40,42 @@ const listAction = [
     name : "patient",
     action : null,
 
+  },
+  {
+    //Doctor
+    type: "CHANGE_DOCTOR",
+    name: "doctor",
+    action: null,
+  },
+  {
+    //patient schedule
+    type: "CHANGE_PATSCHE",
+    name: "patsche",
+    action: null,
+  },
+ 
+  //Outpatient
+  {
+    type: "CHANGE_OUTPATIENT",
+    name: "outpatient",
+    action: null,
+  },
+  {
+    type: "UPDATE_OUTPATIENT",
+    name: "outpatient",
+    action: (state, actions) => {
+      let tmp = [...state.outpatient];
+      let findIndex = tmp.findIndex((i) => {
+        return i.id === actions.value.id;
+      });
+      tmp[findIndex] = actions.value;
+      return {
+        ...state,
+        outpatient: tmp,
+      };
+    },
   }
+
 ];
 
 const reducer = (state = initialState, actions) => {

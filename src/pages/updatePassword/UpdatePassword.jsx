@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./updatePassword.css";
 import Password from "../../assets/img/icon/passPage.png";
 import Loading from "../../assets/img/icon/loading.gif";
+import { connect } from "react-redux";
+import { actionChangePassword } from "../../config/redux/action";
 
 const UpdatePassword = () => {
   const [field, setField] = useState({
@@ -16,6 +18,7 @@ const UpdatePassword = () => {
     setField({...field, [name] : value});
     console.log(field);
   }
+
 
   return (
     <div className="widget">
@@ -57,4 +60,13 @@ const UpdatePassword = () => {
   );
 };
 
-export default UpdatePassword;
+const reduxState = (state) => ({
+  user : state.user,
+  
+});
+const reduxDispatch = (dispatch) => ({
+  changePassword : (data)=> dispatch(actionChangePassword(data)),
+  
+});
+
+export default connect(reduxState, reduxDispatch)(UpdatePassword);
