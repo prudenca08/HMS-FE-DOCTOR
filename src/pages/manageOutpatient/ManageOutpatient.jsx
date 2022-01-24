@@ -32,15 +32,20 @@ export default function ManageOutpatient() {
       width: 170,
       renderCell: (params) => {
         return (
-          <>
-            <Link to={"/outpatient/" + params.row.id}>
-              <EditIcon className="outpatientEdit" />
-            </Link>
-            <DeleteOutlineIcon
-              className="outpatientDelete"
-              onClick={() => handleDelete(params.row.id)}
-            />
-          </>
+          <div className="d-flex gap-3 align-items-center">
+          <Link
+            role="button"
+            className="text-primary"
+            to={"/outpatient/" + params.row.id}
+          >
+            <EditIcon />
+          </Link>
+          <DeleteOutlineIcon
+            role="button"
+            className="text-danger"
+            onClick={() => handleDelete(params.row.id)}
+          />
+        </div>
         );
       },
     },
