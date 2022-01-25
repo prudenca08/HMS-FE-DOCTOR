@@ -55,6 +55,48 @@ export const actionGetAllPatients = () => (dispatch) => {
   });
 };
 
+export const actionGetAllDoctors = () => (dispatch) => {
+  return new Promise((resolve, reject) => {
+    axios
+      .get("/doctor", {})
+      .then((result) => {
+        let data = [...result.data.data];
+        data.forEach((item) => {
+          item.id = item["id:"];
+          item.day = item.doctor_session.day;
+          item.time = item.doctor_session.time;
+        });
+        console.log(data);
+        dispatch({ type: "CHANGE_DOCTOR", value: data });
+        resolve(result.status);
+      })
+      .catch((err) => {
+        dispatch({ type: "CHANGE_DOCTOR", value: [] });
+        reject(err.response);
+      });
+  });
+};
+
+export const actionGetAllPatientSchedule = () => (dispatch) => {
+  return new Promise((resolve, reject) => {
+    axios
+      .get("/patsche", {})
+      .then((result) => {
+        let data = [...result.data.data];
+        data.forEach((item) => {
+          item.id = item["id:"];
+        });
+        console.log(data);
+        dispatch({ type: "CHANGE_PATSCHE", value: data });
+        resolve(result.status);
+      })
+      .catch((err) => {
+        dispatch({ type: "CHANGE_PATSCHE", value: [] });
+        reject(err.response);
+      });
+  });
+};
+
 export const actionGetAllOutpatients = (id) => (dispatch) => {
   return new Promise((resolve, reject) => {
     axios

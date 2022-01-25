@@ -5,17 +5,17 @@ import { Route } from "react-router-dom";
 import { Redirect } from "react-router-dom";
 import { ChangeGlobalRedux } from "../../config/redux/action";
 
-function PrivateRoute({ changeGlobal, children, ...rest }) {
+function PrivateRoute({ changeGlobal, Component, children, ...rest }) {
   let token = localStorage.getItem("token");
   let isTokenExpired = isExpired(token);
 
   return (
     <Route
       {...rest}
-      render={() => {
+      render={(attr) => {
         if (rest.isLogin) {
           if (!isTokenExpired) {
-            return children;
+            return Component ? <Component {...attr} /> : children;
           }
         }
 

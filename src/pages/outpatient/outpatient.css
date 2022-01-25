@@ -17,6 +17,31 @@
     color: white;
 
 }
+.newOutpatientForm{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.newOutpatientItem{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+.newDoctorButton {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-right: 900px;
+  border-radius: 10px;
+  border: none;
+  width: 100px;
+  padding: 7px 10px;
+  cursor: pointer;
+  background-color: #8282f3;
+  color: white;
+  font-weight: 400;
+}
 .outpatientContainer{
     display: flex;
     margin-top: 20px;

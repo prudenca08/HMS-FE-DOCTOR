@@ -21,8 +21,8 @@ function App() {
           <FormLogin />
         </Route>
         <>
+        <div className="containers">
           <NavbarTop />
-          <div className="containers">
             <Sidebar />
             <Switch>
               <PrivateRoute exact path="/">
@@ -40,9 +40,10 @@ function App() {
               <PrivateRoute path="/outpatients">
                 <ManageOutpatient />
               </PrivateRoute>
-              <PrivateRoute path="/outpatient/:outpatientId">
-                <Outpatient />
-              </PrivateRoute>
+              <PrivateRoute
+                path="/outpatient/:outpatientId"
+                Component={Outpatient}
+              ></PrivateRoute>
               <PrivateRoute path="/updatePassword">
                 <UpdatePassword />
               </PrivateRoute>

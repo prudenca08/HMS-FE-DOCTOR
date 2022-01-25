@@ -1,9 +1,9 @@
 .sidebar {
-  flex: 1;
   background-color: #181f31;
-  height: calc(100vh - 50px);
-  position: sticky;
-  top: 50px;
+  width: 250px;
+  height: calc(100vh - 60px);
+  box-sizing: border-box;
+  padding: 30px 20px;
 }
 .sidebarList {
   list-style: none;
