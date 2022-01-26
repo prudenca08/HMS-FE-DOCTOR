@@ -75,7 +75,7 @@ const UpdatePassword = (props) => {
             {field.confirmpassword.trim() !== "" &&
               field.confirmpassword !== field.newpassword && (
                 <div className="error-box px-4 mt-2">
-                  <p>{"Password it's not same"}</p>
+                  <p>{"Password doesn't match"}</p>
                 </div>
               )}
             <button className="btnSavePass" disabled={isLoading}>

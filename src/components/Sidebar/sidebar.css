@@ -26,13 +26,17 @@
 
 .sidebarMenu {
   margin-bottom: 10px;
+  
 }
 
 .sidebarListItem.active,
 .sidebarListItem:hover {
   background-color: #353c4e;
+  width: 180px;
 }
-
+.sidebar.inactive{
+  width: 80px;
+}
 .sidebarIcon{
     margin-right: 5px;
     font-size: 30px !important;

@@ -12,10 +12,6 @@ const ManageOutpatient = (props)=> {
 
   const [data, setData] = useState(outpatientRows);
 
-  const handleDelete = (id) => {
-    setData(data.filter((item) => item.id !== id));
-  };
-
   useEffect(() => {
     if (props.outpatient.length <= 0) {
       props.AllOutpatient(Number(props.user.id)).then(() => {
@@ -28,7 +24,6 @@ const ManageOutpatient = (props)=> {
 
 
   const columns = [
-    { field: "id", headerName: "ID", width: 100 },
     { field: "patientName", headerName: "Patient Name", width: 180 },
     { field: "day", headerName: "Day", width: 150 },
     { field: "date", headerName: "Date", width: 150 },

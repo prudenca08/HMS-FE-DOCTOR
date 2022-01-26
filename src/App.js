@@ -6,7 +6,6 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import Dashboard from "./pages/dashboard/Dashboard";
 import PatientsList from "./pages/patientsList/PatientsList";
 import Patient from "./pages/patient/Patient";
-import Uppro from "./pages/updateProfile/Uppro";
 import ManageOutpatient from "./pages/manageOutpatient/ManageOutpatient";
 import Outpatient from "./pages/outpatient/Outpatient";
 import FormLogin from "./pages/login/Form";
@@ -33,9 +32,6 @@ function App() {
               </PrivateRoute>
               <PrivateRoute path="/patient/:patientId">
                 <Patient />
-              </PrivateRoute>
-              <PrivateRoute path="/update-profile">
-                <Uppro />
               </PrivateRoute>
               <PrivateRoute path="/outpatients">
                 <ManageOutpatient />

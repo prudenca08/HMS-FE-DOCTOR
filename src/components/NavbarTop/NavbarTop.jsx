@@ -52,9 +52,6 @@ const NavbarTop = (props) => {
             className="dropdown-item-custom shadow hide"
             id="dropdown-profile"
           >
-            <span onClick={handleOnClickRedirect} to="/update-profile">
-              Profile
-            </span>
             <span onClick={handleOnClickLogout}>Log out</span>
           </div>
         </div>

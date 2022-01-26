@@ -13,7 +13,7 @@ const Sidebar = () => {
         <div className="sidebarMenu">
           <ul className="sidebarList">
             <Link to="/" className="link">
-              <li className="sidebarListItem active">
+              <li className="sidebarListItem active" >
                 <HomeIcon className="sidebarIcon" />
                 Dashboard
               </li>

@@ -117,7 +117,7 @@ export const actionGetAllOutpatients = (id) => (dispatch) => {
           item.doctor_name = item.doctor.name;
           item.doctor = item.doctor;
         });
-        console.log(data);
+       
         dispatch({ type: "CHANGE_OUTPATIENT", value: tmp });
         resolve(result.status);
       })

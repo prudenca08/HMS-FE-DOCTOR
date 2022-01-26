@@ -9,7 +9,6 @@ import MeetingRoomIcon from "@material-ui/icons/MeetingRoom";
 import AssignmentTurnedInIcon from "@material-ui/icons/AssignmentTurnedIn";
 import FindInPageIcon from "@material-ui/icons/FindInPage";
 import FilterFramesIcon from "@material-ui/icons/FilterFrames";
-import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { connect } from "react-redux";
 import {

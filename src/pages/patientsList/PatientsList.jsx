@@ -23,7 +23,7 @@ const PatientsList = (props)=> {
   }, [props]);
 
   const columns = [
-    { field: "name", headerName: "Name", width: 130 },
+    { field: "name", headerName: "Name", width: 150 },
     { field: "nik", headerName: "NIK", width: 130 },
     {
       field: "dob",
@@ -45,12 +45,12 @@ const PatientsList = (props)=> {
     {
       field: "address",
       headerName: "Address",
-      width: 130,
+      width: 200,
     },
     {
       field: "action",
       headerName: "Action",
-      width: 150,
+      width: 80,
       renderCell: (params) => {
         return (
           <>
@@ -74,7 +74,7 @@ const PatientsList = (props)=> {
           <DataGrid
             rows={data}
             columns={columns}
-            pageSize={10}
+            pageSize={3}
             rowsPerPageOptions={[25]}
             checkboxSelection
             autoHeight={true}

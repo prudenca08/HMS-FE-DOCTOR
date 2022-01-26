@@ -1,5 +1,5 @@
 const data = {
-    API_URL : "http://localhost:8080",
+    API_URL : "https://api.am-arya.com",
     RESPONSIVE_CONFIG: {
         superLargeDesktop: {
           // the naming can be any, depends on you.
