@@ -1,0 +1,17 @@
+.patientsList{
+    flex: 4;
+}
+.patientsEdit{
+    cursor: pointer;
+    margin-right: 20px;
+    color: rgb(42, 124, 218);
+}
+.patientsDelete{
+    cursor: pointer;
+    color: crimson;
+}
+.patientListTitleContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

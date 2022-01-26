@@ -1,0 +1,51 @@
+.patient{
+    flex: 4;
+    padding: 20px;
+}
+.patientTitleContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.patientContainer{
+    display: flex;
+    margin-top: 20px;
+}
+.patientShow{
+    padding: 20px;
+    width: 700px;
+    -webkit-box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+    padding: 20px;
+}
+
+.patientShowTitle{
+    font-size: 25px;
+    font-weight: 600;
+    color: rgb(175, 170, 170)
+}
+.patientShowDetail{
+    margin-top: 20px;
+}
+.patientShowInfo{
+    display: flex;
+    align-items: center;
+    margin: 20px 0px;
+    color: #444;
+}
+.patientShowIcon{
+    font-size: 18px !important;
+}
+.patientShowInfoTitle{
+    margin-left: 10px;
+}
+.ListTitle{
+    margin: 20px 20px;
+  }
+
+
+
+
+
+
